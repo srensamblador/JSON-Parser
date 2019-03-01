@@ -1,0 +1,111 @@
+/**
+ * @generated VGen (for ANTLR) 1.4.0
+ */
+
+
+// package <nombre paquete>;
+
+import ast.*;
+
+/*
+Plantilla para Visitors.
+Para crear un nuevo Visitor cortar y pegar este código y ya se tendría un visitor que compila y
+que al ejecutarlo recorrería todo el árbol (sin hacer nada aún en él).
+Solo quedaría añadir a cada método visit aquello adicional que se quiera realizar sobre su nodo del AST.
+*/
+
+public class <nombre clase> extends DefaultVisitor {
+
+	// ---------------------------------------------------------
+	// Tareas a realizar en cada método visit:
+	//
+	// Si en algún método visit NO SE QUIERE HACER NADA más que recorrer los hijos entonces se puede
+	// borrar (dicho método se heredaría de DefaultVisitor con el código de recorrido).
+	//
+	// Lo siguiente es para cuando se quiera AÑADIR alguna funcionalidad adicional a un visit:
+	//
+	// - El código que aparece en cada método visit es aquel que recorre los hijos. Es el mismo código
+	//		que está implementado en el padre (DefaultVisitor). Por tanto la llamada a 'super.visit' y el
+	//		resto del código del método hacen lo mismo (por ello 'super.visit' está comentado).
+	//
+	// - Lo HABITUAL será borrar todo el código de recorrido dejando solo la llamada a 'super.visit'. De esta
+	//		manera, cada método visit se puede centrar en la tarea que tiene que realizar sobre su nodo del AST
+    //      (dejando que el padre se encargue del recorrido de los hijos).
+	//
+	// - La razón de que aparezca el código de recorrido de los hijos es por si se necesita realizar alguna
+	//		tarea DURANTE el mismo (por ejemplo ir comprobando su tipo). En este caso, ya se tiene implementado
+	//		dicho recorrido y solo habría que incrustar las acciones adicionales en el mismo. En este caso,
+	//		es la llamada a 'super.visit' la que debería ser borrada.
+	// ---------------------------------------------------------
+
+	//	class Atributo { String string;  Valor valor; }
+	public Object visit(Atributo node, Object param) {
+
+		// super.visit(node, param);
+
+		if (node.getValor() != null)
+			node.getValor().accept(this, param);
+
+		return null;
+	}
+
+	//	class Cadena { String string; }
+	public Object visit(Cadena node, Object param) {
+		return null;
+	}
+
+	//	class Numero { String string; }
+	public Object visit(Numero node, Object param) {
+		return null;
+	}
+
+	//	class True {  }
+	public Object visit(True node, Object param) {
+		return null;
+	}
+
+	//	class False {  }
+	public Object visit(False node, Object param) {
+		return null;
+	}
+
+	//	class Null {  }
+	public Object visit(Null node, Object param) {
+		return null;
+	}
+
+	//	class Objeto { List<Atributo> atributo; }
+	public Object visit(Objeto node, Object param) {
+
+		// super.visit(node, param);
+
+		if (node.getAtributo() != null)
+			for (Atributo child : node.getAtributo())
+				child.accept(this, param);
+
+		return null;
+	}
+
+	//	class Array { List<Valor> valor; }
+	public Object visit(Array node, Object param) {
+
+		// super.visit(node, param);
+
+		if (node.getValor() != null)
+			for (Valor child : node.getValor())
+				child.accept(this, param);
+
+		return null;
+	}
+
+	//	class Json { Valor valor; }
+	public Object visit(Json node, Object param) {
+
+		// super.visit(node, param);
+
+		if (node.getValor() != null)
+			node.getValor().accept(this, param);
+
+		return null;
+	}
+}

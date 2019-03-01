@@ -1,0 +1,70 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<style type="text/css">
+.value { font-weight: bold; }
+.dots { color: #bebdbd; }
+.type { color: #BBBBBB; }
+.pos { color: #CCCCCC; }
+.sourceText { color: #BBBBBB; }
+.posText {
+	color: #BBBBBB;
+	text-decoration: underline; font-weight: bold;
+}
+.null {
+	color: #FF0000;
+	font-weight: bold;
+	font-style: italic;
+}
+</style>
+</head>
+
+<body><pre>
+[ASTPrinter] -------------------------------- line:col  line:col
+
+<span class="dots"></span>Json &rarr;                                                      <span class="pos">2:3  16:31   </span><span class="sourceText"></span><span class="posText">"menu": {</span><span class="sourceText"> ... </span><span class="posText">"onclick": "CloseDoc()"</span><span class="sourceText"></span>
+<span class="dots">.  </span>Objeto &rarr;                                                 <span class="pos">2:3  16:31   </span><span class="sourceText"></span><span class="posText">"menu": {</span><span class="sourceText"> ... </span><span class="posText">"onclick": "CloseDoc()"</span><span class="sourceText"></span>
+<span class="dots">.  .  </span>atributo  <span class="type">List&lt;Atributo&gt;</span> = 
+<span class="dots">.  .  |  </span>Atributo &rarr;                                         <span class="pos">2:3  16:31   </span><span class="sourceText"></span><span class="posText">"menu": {</span><span class="sourceText"> ... </span><span class="posText">"onclick": "CloseDoc()"</span><span class="sourceText"></span>
+<span class="dots">.  .  |  .  </span>"<span class="value">"menu"</span>"  
+<span class="dots">.  .  |  .  </span>Objeto &rarr;                                        <span class="pos">3:5  16:31   </span><span class="sourceText"></span><span class="posText">"name": "File",</span><span class="sourceText"> ... </span><span class="posText">"onclick": "CloseDoc()"</span><span class="sourceText"></span>
+<span class="dots">.  .  |  .  |  </span>atributo  <span class="type">List&lt;Atributo&gt;</span> = 
+<span class="dots">.  .  |  .  |  .  </span>Atributo &rarr;                                <span class="pos">3:5  3:18    </span><span class="sourceText"></span><span class="posText">"name": "File"</span><span class="sourceText">,</span>
+<span class="dots">.  .  |  .  |  .  |  </span>"<span class="value">"name"</span>"  
+<span class="dots">.  .  |  .  |  .  |  </span>""File""  <span class="type">Cadena.string</span>                <span class="pos">3:13  3:18   </span><span class="sourceText">"name": </span><span class="posText">"File"</span><span class="sourceText">,</span>
+<span class="dots">.  .  |  .  |  .  </span>Atributo &rarr;                                <span class="pos">4:5  4:12    </span><span class="sourceText"></span><span class="posText">"active"</span><span class="sourceText">: true,</span>
+<span class="dots">.  .  |  .  |  .  |  </span>"<span class="value">"active"</span>"  
+<span class="dots">.  .  |  .  |  .  |  </span><span class="value">True</span> &rarr;                                 <span class="pos"><span class="null">null</span>  <span class="null">null</span>   </span>
+<span class="dots">.  .  |  .  |  .  </span>Atributo &rarr;                                <span class="pos">5:5  16:31   </span><span class="sourceText"></span><span class="posText">"menuitems": [</span><span class="sourceText"> ... </span><span class="posText">"onclick": "CloseDoc()"</span><span class="sourceText"></span>
+<span class="dots">.  .  |  .  |  .  |  </span>"<span class="value">"menuitems"</span>"  
+<span class="dots">.  .  |  .  |  .  |  </span>Array &rarr;                                <span class="pos">7:9  16:31   </span><span class="sourceText"></span><span class="posText">"value": "New",</span><span class="sourceText"> ... </span><span class="posText">"onclick": "CloseDoc()"</span><span class="sourceText"></span>
+<span class="dots">.  .  |  .  |  .  |  .  </span>valor  <span class="type">List&lt;Valor&gt;</span> = 
+<span class="dots">.  .  |  .  |  .  |  .  |  </span>Objeto &rarr;                         <span class="pos">7:9  8:35    </span><span class="sourceText"></span><span class="posText">"value": "New",</span><span class="sourceText"> ... </span><span class="posText">"onclick": "CreateNewDoc()"</span><span class="sourceText"></span>
+<span class="dots">.  .  |  .  |  .  |  .  |  .  </span>atributo  <span class="type">List&lt;Atributo&gt;</span> = 
+<span class="dots">.  .  |  .  |  .  |  .  |  .  |  </span>Atributo &rarr;                 <span class="pos">7:9  7:22    </span><span class="sourceText"></span><span class="posText">"value": "New"</span><span class="sourceText">,</span>
+<span class="dots">.  .  |  .  |  .  |  .  |  .  |  .  </span>"<span class="value">"value"</span>"  
+<span class="dots">.  .  |  .  |  .  |  .  |  .  |  .  </span>""New""  <span class="type">Cadena.string</span>  <span class="pos">7:18  7:22   </span><span class="sourceText">"value": </span><span class="posText">"New"</span><span class="sourceText">,</span>
+<span class="dots">.  .  |  .  |  .  |  .  |  .  |  </span>Atributo &rarr;                 <span class="pos">8:9  8:35    </span><span class="sourceText"></span><span class="posText">"onclick": "CreateNewDoc()"</span><span class="sourceText"></span>
+<span class="dots">.  .  |  .  |  .  |  .  |  .  |  .  </span>"<span class="value">"onclick"</span>"  
+<span class="dots">.  .  |  .  |  .  |  .  |  .  |  .  </span>""CreateNewDoc()""  <span class="type">Cadena.string</span><span class="pos">8:20  8:35   </span><span class="sourceText">"onclick": </span><span class="posText">"CreateNewDoc()"</span><span class="sourceText"></span>
+<span class="dots">.  .  |  .  |  .  |  .  |  </span>Objeto &rarr;                         <span class="pos">11:9  12:30  </span><span class="sourceText"></span><span class="posText">"value": "Open",</span><span class="sourceText"> ... </span><span class="posText">"onclick": "OpenDoc()"</span><span class="sourceText"></span>
+<span class="dots">.  .  |  .  |  .  |  .  |  .  </span>atributo  <span class="type">List&lt;Atributo&gt;</span> = 
+<span class="dots">.  .  |  .  |  .  |  .  |  .  |  </span>Atributo &rarr;                 <span class="pos">11:9  11:23  </span><span class="sourceText"></span><span class="posText">"value": "Open"</span><span class="sourceText">,</span>
+<span class="dots">.  .  |  .  |  .  |  .  |  .  |  .  </span>"<span class="value">"value"</span>"  
+<span class="dots">.  .  |  .  |  .  |  .  |  .  |  .  </span>""Open""  <span class="type">Cadena.string</span> <span class="pos">11:18  11:23 </span><span class="sourceText">"value": </span><span class="posText">"Open"</span><span class="sourceText">,</span>
+<span class="dots">.  .  |  .  |  .  |  .  |  .  |  </span>Atributo &rarr;                 <span class="pos">12:9  12:30  </span><span class="sourceText"></span><span class="posText">"onclick": "OpenDoc()"</span><span class="sourceText"></span>
+<span class="dots">.  .  |  .  |  .  |  .  |  .  |  .  </span>"<span class="value">"onclick"</span>"  
+<span class="dots">.  .  |  .  |  .  |  .  |  .  |  .  </span>""OpenDoc()""  <span class="type">Cadena.string</span><span class="pos">12:20  12:30 </span><span class="sourceText">"onclick": </span><span class="posText">"OpenDoc()"</span><span class="sourceText"></span>
+<span class="dots">.  .  |  .  |  .  |  .  |  </span>Objeto &rarr;                         <span class="pos">15:9  16:31  </span><span class="sourceText"></span><span class="posText">"value": "Close",</span><span class="sourceText"> ... </span><span class="posText">"onclick": "CloseDoc()"</span><span class="sourceText"></span>
+<span class="dots">.  .  |  .  |  .  |  .  |  .  </span>atributo  <span class="type">List&lt;Atributo&gt;</span> = 
+<span class="dots">.  .  |  .  |  .  |  .  |  .  |  </span>Atributo &rarr;                 <span class="pos">15:9  15:24  </span><span class="sourceText"></span><span class="posText">"value": "Close"</span><span class="sourceText">,</span>
+<span class="dots">.  .  |  .  |  .  |  .  |  .  |  .  </span>"<span class="value">"value"</span>"  
+<span class="dots">.  .  |  .  |  .  |  .  |  .  |  .  </span>""Close""  <span class="type">Cadena.string</span><span class="pos">15:18  15:24 </span><span class="sourceText">"value": </span><span class="posText">"Close"</span><span class="sourceText">,</span>
+<span class="dots">.  .  |  .  |  .  |  .  |  .  |  </span>Atributo &rarr;                 <span class="pos">16:9  16:31  </span><span class="sourceText"></span><span class="posText">"onclick": "CloseDoc()"</span><span class="sourceText"></span>
+<span class="dots">.  .  |  .  |  .  |  .  |  .  |  .  </span>"<span class="value">"onclick"</span>"  
+<span class="dots">.  .  |  .  |  .  |  .  |  .  |  .  </span>""CloseDoc()""  <span class="type">Cadena.string</span><span class="pos">16:20  16:31 </span><span class="sourceText">"onclick": </span><span class="posText">"CloseDoc()"</span><span class="sourceText"></span>
+
+[ASTPrinter] --------------------------------
+</pre>
+</body>
+</html>

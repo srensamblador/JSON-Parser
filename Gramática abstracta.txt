@@ -1,0 +1,15 @@
+CATEGORIES
+valor
+
+NODES
+atributo -> string valor ;
+
+cadena:valor -> string ;
+numero:valor -> string ;
+true:valor -> ;
+false:valor -> ;
+null:valor -> ;
+objeto:valor -> atributo*;
+array:valor -> valor*;
+
+json -> valor;
